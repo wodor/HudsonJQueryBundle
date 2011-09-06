@@ -28,7 +28,7 @@ Init bundle
     {
         $bundles = array(
             // ...
-            new Hudson\jQueryBundle\HudsonJQueryBundle(),
+            new Hudson\JQueryBundle\HudsonJQueryBundle(),
         );
     // ...
     }
@@ -40,16 +40,16 @@ Only jQuery:
 
 ::
 
-    {% include 'HudsonjQueryBundle::_jQuery.html.twig' %}
+    {% include 'HudsonJQueryBundle::_jQuery.html.twig' %}
 
 jQuery with UI:
 
 ::
 
-    {% include 'HudsonjQueryBundle::_jQueryUI.html.twig' %}
+    {% include 'HudsonJQueryBundle::_jQueryUI.html.twig' %}
 
 jQuery with UI and custom UI CSS:
 
 ::
 
-    {% include 'HudsonjQueryBundle::_jQueryUI.html.twig' with {'customCss': 'path/to/the/yours/custom/ui/css'} %}
+    {% include 'HudsonJQueryBundle::_jQueryUI.html.twig' with {'customCss': 'path/to/the/yours/custom/ui/css'} %}

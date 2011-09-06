@@ -7,7 +7,7 @@
 
     <!--
     <parameters>
-        <parameter key="hudsonj_query.example.class">Hudson\jQueryBundle\Example</parameter>
+        <parameter key="hudsonj_query.example.class">Hudson\JQueryBundle\Example</parameter>
     </parameters>
 
     <services>
