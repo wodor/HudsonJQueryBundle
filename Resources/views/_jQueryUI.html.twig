@@ -1,0 +1,13 @@
+{% block jQuery %}
+
+{% if customCss is defined %}
+
+<link href="{{ asset(customCss) }}" rel="stylesheet" type="text/css">
+{% else %}
+<link href="{{ asset('/bundles/hudsonjquery/css/jquery-ui.css') }}" rel="stylesheet" type="text/css">
+{% endif %}
+
+<script language="JavaScript" type="text/javascript" src="{{ asset('/bundles/hudsonjquery/js/jquery.min.js') }}"></script>
+<script language="JavaScript" type="text/javascript" src="{{ asset('/bundles/hudsonjquery/js/jquery-ui.min.js') }}"></script>
+
+{% endblock %}
