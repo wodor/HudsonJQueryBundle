@@ -6,7 +6,7 @@ HudsonJQueryBundle
 :Version: 0.1
 
 
-This bundle provides integration for _jQuery: http://jquery.com and _jQueryUI: http://jqueryui.com)in your Symfony2 Project.
+This bundle provides integration for _jQuery: http://jquery.com and _jQueryUI: http://jqueryui.com in your Symfony2 Project.
 
 For documentation, see:
 
