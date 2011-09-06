@@ -30,9 +30,9 @@ Init bundle
             // ...
             new Hudson\jQueryBundle\HudsonJQueryBundle(),
         );
-	// ...
+    // ...
     }
-        
+
 Use bundle
 ----------
 
@@ -51,5 +51,5 @@ jQuery with UI:
 jQuery with UI and custom UI CSS:
 
 ::
-    
+
     {% include 'HudsonjQueryBundle::_jQueryUI.html.twig' with {'customCss': 'path/to/the/yours/custom/ui/css'} %}

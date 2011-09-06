@@ -1,9 +1,9 @@
 <?php
 
-namespace Hudson\jQueryBundle;
+namespace Hudson\JQueryBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class HudsonjQueryBundle extends Bundle
+class HudsonJQueryBundle extends Bundle
 {
 }
