@@ -33,6 +33,12 @@ Init bundle
     // ...
     }
 
+Don't forget to install assets:
+
+::
+
+    php app/console assets:install
+
 Use bundle
 ----------
 
