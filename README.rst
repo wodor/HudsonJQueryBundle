@@ -8,6 +8,8 @@ HudsonJQueryBundle
 
 This bundle provides integration for _jQuery: http://jquery.com and _jQueryUI: http://jqueryui.com in your Symfony2 Project.
 
+Also it provides datePickerForm Type
+
 For documentation, see:
 
     Resources/doc/index.rst
