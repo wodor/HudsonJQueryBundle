@@ -1,0 +1,19 @@
+{% block datepicker_widget %}
+{% spaceless %}
+    {% if widget == 'single_text' %}
+        {{ block('field_widget') }}
+    {% else %}
+        <div {{ block('widget_container_attributes') }}>
+            {{ form_errors(form.date) }}
+            {{ form_errors(form.time) }}
+            {{ form_widget(form.date) }}
+            {{ form_widget(form.time,{'attr':{'style':'display: inline'} }) }}
+        </div>
+        <script>
+           $(function() {
+               $( "#{{ id }}_date" ).datepicker();
+           });
+       </script>
+    {% endif %}
+{% endspaceless %}
+{% endblock datepicker_widget %}
