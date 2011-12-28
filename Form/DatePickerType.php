@@ -31,10 +31,6 @@ class DatePickerType extends AbstractType {
             $timeParts[] = 'second';
         }
 
-        if ($options['date_widget'] !== $options['time_widget']) {
-            throw new FormException(sprintf('Options "date_widget" and "time_widget" need to be identical. Used: "date_widget" = "%s" and "time_widget" = "%s".', $options['date_widget'] ?: 'choice', $options['time_widget'] ?: 'choice'));
-        }
-
         if ($options['widget'] === 'single_text') {
             $builder->appendClientTransformer(new DateTimeToStringTransformer($options['data_timezone'], $options['user_timezone'], $format));
         } else {
@@ -78,8 +74,6 @@ class DatePickerType extends AbstractType {
             }
 
             $dateOptions['input'] = 'array';
-            $dateOptions['widget'] = 'single_text';
-
             $timeOptions['input'] = 'array';
 
             $builder
@@ -118,7 +112,7 @@ class DatePickerType extends AbstractType {
             'input'         => 'datetime',
             'data_timezone' => null,
             'user_timezone' => null,
-            'date_widget'   => null,
+            'date_widget'   => 'single_text',
             'date_format'   => 'Y-M-d',
             'time_widget'   => null,
             /* Defaults for date field */
