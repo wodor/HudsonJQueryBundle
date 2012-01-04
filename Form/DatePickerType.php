@@ -76,9 +76,12 @@ class DatePickerType extends AbstractType {
             $dateOptions['input'] = 'array';
             $timeOptions['input'] = 'array';
 
+          //  $dateOptions['csrf_protection'] = false;
+            $timeOptions['csrf_protection'] = false;
+
             $builder
                 ->appendClientTransformer(new DataTransformerChain(array(
-                    new DateTimeToArrayTransformer($options['data_timezone'], $options['user_timezone'], $parts),
+                    new DateTimeToArrayTransformer($options['data_timezone'], $options['user_timezone'], $parts, true),
                     new ArrayToPartsTransformer(array(
                         'date' => array('year', 'month', 'day'),
                         'time' => $timeParts,
@@ -113,7 +116,7 @@ class DatePickerType extends AbstractType {
             'data_timezone' => null,
             'user_timezone' => null,
             'date_widget'   => 'single_text',
-            'date_format'   => 'Y-M-d',
+            'date_format'   => 'YYYY-MM-dd', // remember it's not date() format
             'time_widget'   => null,
             /* Defaults for date field */
             'years'         => range(date('Y') - 5, date('Y') + 5),
@@ -131,7 +134,8 @@ class DatePickerType extends AbstractType {
             'widget'        => null,
 //            // This will overwrite "empty_value" child options
 //            'empty_value'   => null,
-            'invalid_message'=>'Date format invalid'
+            'invalid_message'=>'Date format invalid',
+            'csrf_protection' => false,
         );
     }
 
