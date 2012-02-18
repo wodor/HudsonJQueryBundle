@@ -116,7 +116,7 @@ class DatePickerType extends AbstractType {
             'data_timezone' => null,
             'user_timezone' => null,
             'date_widget'   => 'single_text',
-            'date_format'   => 'YYYY-MM-dd', // remember it's not date() format
+            'date_format'   => 'yyyy-MM-dd', // remember it's not date() format
             'time_widget'   => null,
             /* Defaults for date field */
             'years'         => range(date('Y') - 5, date('Y') + 5),
